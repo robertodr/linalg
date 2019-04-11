@@ -41,19 +41,6 @@ jobs:
           )
         displayName: "Check cmake configuration"
 
-      # Check ctest configuration
-      - script: |
-          setlocal EnableDelayedExpansion
-          echo ctest.type: %CTEST_TYPE%
-          set VALID=false
-          if "%CTEST_TYPE%"=="quick" set VALID=true
-          if "%CTEST_TYPE%"=="full" set VALID=true
-          if "!VALID!"=="false" (
-            echo ERROR: Invalid "ctest.type" value: "%CTEST_TYPE%". Valid values: "quick" and "full".
-            exit 1
-          )
-        displayName: "Check ctest configuration"
-
       # Check conda configuration
       - script: |
           setlocal EnableDelayedExpansion
