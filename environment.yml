@@ -1,0 +1,13 @@
+name: linalg 
+channels:
+  - conda-forge
+dependencies:
+  - cmake
+  - python=3.7
+  - pybind11
+  - blas=*=mkl
+  - numpy
+  - xsimd
+  - xtensor-blas
+  - xtensor-io
+  - xtensor-python
